@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Quiniou - Portfolio</title>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+        </script>
+
+    <!-- Montserrat Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Material Google Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .header {
+            background-image: url(media/BANNIERE/headway-5QgIuuBxKwM-unsplash.webp);
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: .5;
+        }
+
+        img {
+            max-width: 8rem !important;
+        }
+
+        footer img {
+            max-width: 3rem !important;
+        }
+
+        .card-img {
+            max-width: initial !important;
+            opacity: .3;
+        }
+
+        .btn.btn-danger.btn-lg.rounded-circle.mx-1.shadow {
+            height: 3.4rem;
+            width: 3.4rem;
+        }
+
+        .nav-link.btn.btn-lg.rounded-circle.mx-1.shadow {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        .position {
+            position: relative;
+            padding-top: 70px;
+        }
+
+        .button-group {
+            margin-top: -97px;
+        }
+
+        .prefecture {
+            background-image: url(media/VIGNETTE/2019-02-25\ 15-25-24\ Panasonic\ DMC-GX80\ 38.webp);
+        }
+
+        .mplab {
+            background-image: url(media/VIGNETTE/70837406_2596398300419919_7289503200116211712_n.webp);
+        }
+
+        .emak-assistant {
+            background-image: url(media/VIGNETTE/vlcsnap-2020-09-09-21h14m12s440.webp);
+        }
+
+        .emak-webmaster {
+            background-image: url(media/VIGNETTE/vlcsnap-2020-09-09-21h15m15s761.webp);
+        }
+
+        .porte-du-miroir-intervenant {
+            background-image: url(media/VIGNETTE/domenico-loia-DHq8C54g6Bs-unsplash.webp);
+        }
+
+        .service-civique {
+            background-image: url(media/VIGNETTE/dylan-gillis-KdeqA3aTnBY-unsplash.webp);
+        }
+
+        .poubelle {
+            background-image: url(media/VIGNETTE/pawel-czerwinski-RkIsyD_AVvc-unsplash.webp);
+        }
+
+        .animation {
+            background-image: url(media/VIGNETTE/2017-12-08\ 16-05-59\ Sony\ G8441\ 050.webp);
+        }
+
+        .kiabi {
+            background-image: url(media/VIGNETTE/2017-06-15\ 14-09-21\ LENOVO\ Lenovo\ Z90a40\ 033.webp);
+        }
+
+        .publicité {
+            background-image: url(media/VIGNETTE/42943787_10212839993130373_1784950702699708416_o.webp);
+        }
+
+        .mmi {
+            background-image: url(media/VIGNETTE/iut-saint-die-des-vosges.webp);
+        }
+
+        .pos {
+            background-image: url(media/VIGNETTE/Screenshot_2020-09-11\ Le\ Cnam\ Alsace\ s\ engage\ dans\ le\ Projet\ -\ Orientation\ -\ Solidarité\(1\).webp);
+        }
+
+        .histoire {
+            background-image: url(media/VIGNETTE/fonderie_2.webp);
+        }
+
+        .bac {
+            background-image: url(media/VIGNETTE/albert-schweitzer-soigne-l-esprit-de-communaute-1484581687.webp);
+        }
+
+        .card.bg-dark.text-white.border-0.shadow {
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .card.bg-dark.text-white.border-0.shadow::after {
+            position: absolute;
+            /* z-index: 1; */
+            width: 100%;
+            height: 100%;
+            /* display: block; */
+            /* left: 0; */
+            /* top: 0; */
+            content: "";
+            background-color: #343a40;
+            opacity: .7;
+            border-radius: 0.25rem;
+        }
+
+        .card.bg-danger.text-white.border-0.shadow::after {
+            position: absolute;
+            /* z-index: 1; */
+            width: 100%;
+            height: 100%;
+            /* display: block; */
+            /* left: 0; */
+            /* top: 0; */
+            content: "";
+            background-color: #dc3545;
+            opacity: .9;
+            border-radius: 0.25rem;
+        }
+
+        .card.bg-danger.text-white.border-0.shadow {
+            background-repeat: no-repeat;
+            background-size: 23rem;
+            background-position: -50%;
+        }
+
+        .brush-fill {
+            background-image: url(media/bootstrap-icons-1.0.0/brush-fill.svg);
+        }
+
+        .calendar-check-fill {
+            background-image: url(media/bootstrap-icons-1.0.0/calendar-check-fill.svg);
+        }
+
+        .calendar-date-fill {
+            background-image: url(media/bootstrap-icons-1.0.0/calendar-date-fill.svg);
+        }
+
+        .globe {
+            background-image: url(media/bootstrap-icons-1.0.0/globe.svg);
+        }
+
+        .at {
+            background-image: url(media/bootstrap-icons-1.0.0/at.svg);
+        }
+
+        .camera-reels-fill {
+            background-image: url(media/bootstrap-icons-1.0.0/camera-reels-fill.svg);
+        }
+
+        .people-fill {
+            background-image: url(media/bootstrap-icons-1.0.0/people-fill.svg);
+        }
+
+        .card-body {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-text.font-weight-light {
+            line-height: 1.7rem;
+        }
+
+        .small-text {
+            font-size: small !important;
+            line-height: 1.3rem !important;
+        }
+
+        .tab-content>.active {
+            display: flex !important;
+            flex-wrap: wrap !important;
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            background-color: #dc3545 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div>
+        <div class="header"></div>
+        <div class="container text-center text-white p-5">
+            <img class="img-fluid rounded-circle shadow" src="media/PROFIL/2019-12-27 13-44-06 samsung SM-G970F 096.webp"
+                alt="">
+            <h2 class="font-weight-bold mt-5 pt-5 mb-0">Alex Quiniou</h2>
+            <p class="font-weight-bold text-light">Communication graphique</p>
+            <div class="w-50 d-flex justify-content-around mx-auto mt-5">
+                <div class="mx-2">
+                    <h2>3 ans</h2>
+                    <p class="font-weight-light">Expériences</p>
+                </div>
+                <div class="mx-2">
+                    <h2>3 ans</h2>
+                    <p class="font-weight-light">Formations</p>
+                </div>
+                <div class="mx-2">
+                    <h2>235+</h2>
+                    <p class="font-weight-light">Projets</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white position shadow">
+        <div class="container text-center">
+            <div class="button-group">
+                <a class="btn btn-danger btn-lg rounded-pill px-5 mx-1 shadow d-inline-flex align-items-center justify-content-center"
+                    href="http://" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                <!-- <a class="btn btn-danger btn-lg rounded-circle mx-1 shadow d-inline-flex align-items-center justify-content-center"
+                    href="https://www.facebook.com/alex.quiniou/" target="_blank" rel="noopener noreferrer">
+                    <i class="material-icons">facebook</i>
+                </a> -->
+                <a class="btn btn-danger btn-lg rounded-circle mx-1 shadow d-inline-flex align-items-center justify-content-center"
+                    href="https://github.com/AlexQuiniou" target="_blank" rel="noopener noreferrer">
+                    <i class="material-icons">star</i>
+                    <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-asterisk" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
+                    </svg> -->
+                </a>
+            </div>
+            <h3 class="font-weight-bold my-5 pt-5">A propos de moi</h3>
+            <p class="m-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sagittis metus vitae nibh
+                iaculis, eu
+                viverra
+                eros tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ante neque, tristique non
+                malesuada nec, laoreet vehicula ante. In consectetur massa non lorem sodales, ac vestibulum neque
+                rutrum.
+                Sed orci lorem, lobortis gravida commodo sollicitudin, lobortis a lectus. Fusce bibendum aliquet
+                rhoncus.
+                Aenean volutpat dolor ac nulla condimentum, ac varius urna luctus.
+            </p>
+            <p> Passionné par la communication graphique, je vie l'experience visuelle comme un moyen d'expression à
+                part entiere avec ses regles et codes qui lui sont propres. J'ai peaufiné mes armes avec une multitudes
+                d'experiences de terrain et théoriques. J'ai ainsi travailllé avec des personnes au compétences tres
+                diverses et à appris une compétences difficile à acquerir. la capacité à s'adapter à n'importe quel
+                terrain. Tel un 4x4 je continue à évoluer dans les milieux les plus variés et difficiles et m'améliore
+                et apprend chaque jour avec hargne.</p>
+            <p>Passionné par la communication, je pense une communication à 360°. Cela passe par une bonne préparation,
+                une bonne gestion, des elements visuels léchés, un vocabulaire adéquat, une équipe soudée et une
+                expérience terrain approfondie. </p>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 id="titre" class="font-weight-bold my-5 pt-5">Expériences</h4>
+                    <div class="nav-align-center text-center">
+                        <ul class="nav nav-pills d-inline-flex" id="pills-tab" role="tablist">
+                            <li class="nav-item mx-2" role="presentation">
+                                <a class="nav-link active btn btn-lg rounded-circle mx-1 shadow d-flex align-items-center justify-content-center"
+                                    id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                                    aria-controls="pills-home" aria-selected="true" onclick="test('pills-home')">
+                                    <i class="material-icons">work</i>
+                                    <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-briefcase-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                        <path fill-rule="evenodd"
+                                            d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5v1.384l-7.614 2.03a1.5 1.5 0 0 1-.772 0L0 5.884V4.5zm5-2A1.5 1.5 0 0 1 6.5 1h3A1.5 1.5 0 0 1 11 2.5V3h-1v-.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V3H5v-.5z" />
+                                    </svg> -->
+                                </a>
+                            </li>
+                            <li class="nav-item mx-2" role="presentation">
+                                <a class="nav-link btn btn-lg rounded-circle mx-1 shadow d-flex align-items-center justify-content-center"
+                                    id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false" onclick="test('pills-profile')">
+                                    <i class="material-icons">book</i>
+                                    <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-book-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                                    </svg> -->
+                                </a>
+                            </li>
+                            <li class="nav-item mx-2" role="presentation">
+                                <a class="nav-link btn btn-lg rounded-circle mx-1 shadow d-flex align-items-center justify-content-center"
+                                    id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                                    aria-controls="pills-contact" aria-selected="false" onclick="test('pills-contact')">
+                                    <i class="material-icons">how_to_reg</i>
+                                    <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-check-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9.854-2.854a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                    </svg> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content mt-5" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 prefecture">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Assistant de communication</h2>
+                                        <h4>Préfecture du Bas-Rhin</h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h4><span class="badge badge-pill badge-danger align-middle m-1">2019</span>
+                                            </h4>
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">11
+                                                    mois</span></h5>
+                                        </div>
+                                        <p class="card-text font-weight-light">Rédaction et mise en page (mallette
+                                            de
+                                            crise, rapports) conception de vignettes,d’infographies, rédaction et
+                                            publication pour les réseaux sociaux (facebook, twitter, youtube),
+                                            élaboration de signatures mails et document standardisés pour le service
+                                            communication, relation presse (relance et gestion base de donnée),
+                                            alimentation des sites internet et intranet.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 mplab">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Cameraman / Web designer</h2>
+                                        <h4>MPLab</h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h4><span class="badge badge-pill badge-danger align-middle m-1">2018</span>
+                                            </h4>
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">3
+                                                    mois</span></h5>
+                                        </div>
+                                        <p class="card-text font-weight-light">Élaboration d’un site web et prise de
+                                            vue
+                                            caméra pour leur festival SOUND DAYS, création d'un logotype et retour
+                                            sur
+                                            l'échange entre les deux universités.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 emak-assistant">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Assistant de communication</h2>
+                                        <h4>Emak France</h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h4><span class="badge badge-pill badge-danger align-middle m-1">2016</span>
+                                            </h4>
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">11
+                                                    mois</span></h5>
+                                        </div>
+                                        <p class="card-text font-weight-light">Concevoir et mettre en place un
+                                            magasin
+                                            de vente web : Création d’un catalogue web B2B d’accessoires et
+                                            consommable
+                                            (huile, gants, casques, pièce d’échange). Retouche photo et mise en page
+                                            du
+                                            catalogue bi-annuel, publipostage, entrée de données produit dans la
+                                            base de
+                                            donnée de l’entreprise.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 emak-webmaster">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Webmaster</h2>
+                                        <h4>Emak France</h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h4><span class="badge badge-pill badge-danger align-middle m-1">2015</span>
+                                            </h4>
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">4
+                                                    mois</span></h5>
+                                        </div>
+                                        <p class="card-text font-weight-light">Concevoir et mettre en place un
+                                            magasin
+                                            de vente web : Création d’un catalogue web B2B d’accessoires et
+                                            consommable
+                                            (huile, gants, casques, pièce d’échange).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 porte-du-miroir-intervenant">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Intervenant technique communication</h2>
+                                        <h4>Centre Socio Culturel Porte Du Miroir</h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h4><span class="badge badge-pill badge-danger align-middle m-1">2015</span>
+                                            </h4>
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">4
+                                                    mois</span></h5>
+                                        </div>
+                                        <p class="card-text font-weight-light">Structuration d'un plan de
+                                            communication
+                                            : Création d’affiche pour communiquer les différentes activités
+                                            proposées
+                                            (périscolaire, cours de danse, poterie), mise en place d’outils de
+                                            communication externe et interne (charte graphique, documentation
+                                            standardisée) rentrée d’activités dans la base de donnée du centre
+                                            social.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 service-civique">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Service civique</h2>
+                                        <h4>Centre Socio Culturel Porte Du Miroir</h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h4><span class="badge badge-pill badge-danger align-middle m-1">2014</span>
+                                            </h4>
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">11
+                                                    mois</span></h5>
+                                        </div>
+                                        <p class="card-text font-weight-light">Structuration d'un plan de
+                                            communication
+                                            : Création d’affiche pour communiquer les différentes activités
+                                            proposées
+                                            (périscolaire, cours de danse, poterie), mise en place d’outils de
+                                            communication externe et interne (charte graphique, documentation
+                                            standardisée) rentrée d’activités dans la base de donnée du centre
+                                            social.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-7 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 poubelle">
+                                    <div class="card-body p-4">
+                                        <h4 class="card-title my-4">Agent de service</h4>
+                                        <h5>Paul Tierin SARL</h5>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">2018</span>
+                                            </h5>
+                                            <h6><span class="badge badge-pill badge-danger align-middle m-1">1
+                                                    mois</span></h6>
+                                        </div>
+                                        <p class="card-text font-weight-light small-text">Nettoyage de locaux
+                                            professionnels et
+                                            privés (cage d’escalier, hall), ramassage et vidage des poubelles.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-7 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 animation">
+                                    <div class="card-body p-4">
+                                        <h4 class="card-title my-4">Animation NAP Informatique</h4>
+                                        <h5>Mairie de Saint Dié des Vosges</h5>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">2018</span>
+                                            </h5>
+                                            <h6><span class="badge badge-pill badge-danger align-middle m-1">5
+                                                    mois</span></h6>
+                                        </div>
+                                        <p class="card-text font-weight-light small-text">Sensibilisation des
+                                            enfants
+                                            aux nouvelles
+                                            technologies, amener à développer leur créativité (Photographie,
+                                            retouche
+                                            image, montage vidéo, développement éducatif).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-7 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 kiabi">
+                                    <div class="card-body p-4">
+                                        <h4 class="card-title my-4">Gestion et répartition stock vêtements</h4>
+                                        <h5>Kiabi</h5>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">2017</span>
+                                            </h5>
+                                            <h6><span class="badge badge-pill badge-danger align-middle m-1">1
+                                                    mois</span></h6>
+                                        </div>
+                                        <p class="card-text font-weight-light small-text">Réception, triage,
+                                            stockage et
+                                            répartition des vêtements dans le magasin selon chaque arrivage
+                                            quotidien.
+                                            Rangement des vêtements dans le magasin en fin de journée et accompagner
+                                            l’aménagement de nouveaux rayons.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 publicité">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Licence professionnelle Métiers de la communication
+                                            : publicité</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h4><span class="badge badge-pill badge-danger align-middle m-1">2019</span>
+                                            </h4>
+                                            <h5><span
+                                                    class="badge badge-pill badge-danger align-middle m-1">Bac+3</span>
+                                            </h5>
+                                        </div>
+                                        <p class="card-text font-weight-light">La Licence professionnelle Métiers de la
+                                            communication : publicité, parcours Métiers de la publicité vise à donner
+                                            aux étudiants les compétences théoriques et professionnelles correspondant
+                                            aux métiers stratégiques de la publicité et de la communication globale, en
+                                            agence ou chez l’annonceur et qui intègrent de plus en plus une connaissance
+                                            de l’environnement numérique.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 mmi">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Métiers du Multimédia et de l’Internet</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h4><span class="badge badge-pill badge-danger align-middle m-1">2018</span>
+                                            </h4>
+                                            <h5><span
+                                                    class="badge badge-pill badge-danger align-middle m-1">Bac+2</span>
+                                            </h5>
+                                        </div>
+                                        <p class="card-text font-weight-light">Intégrer des compétences spécifiques à la
+                                            conception et à la production de produits et services multimédia alliant
+                                            innovation technique et esthétique.
+                                            Formation très large abordant tout les éléments de la communication pratique
+                                            : dessin, photo, image, vidéo montage et caméra, rédaction, web HTML, CSS et
+                                            CMS, gestion de projet en groupe et seul.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-7 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 pos">
+                                    <div class="card-body p-4">
+                                        <h4 class="card-title my-4">Projet Orientation et Solidarité</h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">2015</span>
+                                            </h5>
+                                            <h6><span
+                                                    class="badge badge-pill badge-danger align-middle m-1">Bac+1</span>
+                                            </h6>
+                                        </div>
+                                        <p class="card-text font-weight-light small-text">Formation étudiante Projet
+                                            Orientation Solidarité (POS) gérée par le CNAM (Conservatoire national des
+                                            arts et métiers).
+                                            Permettre aux étudiants en panne d'orientation de murir leur projet de
+                                            formation professionnelle. Valoriser des savoirs-faire et savoirs-être. Se
+                                            construire à travers les autres en donnant aux autres.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-7 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 histoire">
+                                    <div class="card-body p-4">
+                                        <h4 class="card-title my-4"> Licence Histoire </h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">2013</span>
+                                            </h5>
+                                            <h6><span
+                                                    class="badge badge-pill badge-danger align-middle m-1">Bac+3</span>
+                                            </h6>
+                                        </div>
+                                        <p class="card-text font-weight-light small-text">Études d'histoire au campus
+                                            Fonderie-FSESJ-UHA (Faculté des lettres, langues et sciences humaines UHA
+                                            Mulhouse (histoire)).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-7 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-dark text-white border-0 shadow h-100 bac">
+                                    <div class="card-body p-4">
+                                        <h4 class="card-title my-4">Diplôme du baccalauréat général</h4>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <h5><span class="badge badge-pill badge-danger align-middle m-1">2011</span>
+                                            </h5>
+                                            <h6><span class="badge badge-pill badge-danger align-middle m-1">Bac</span>
+                                            </h6>
+                                        </div>
+                                        <p class="card-text font-weight-light small-text">Baccalauréat littéraire, Lycée
+                                            Albert Schweitzer, option musique.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-danger text-white border-0 shadow h-100 brush-fill">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Création d’outils de communication graphique</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        </div>
+                                        <p class="card-text font-weight-light">Affiche, flyer, dépliant, mise en page de
+                                            dossier, logo, charte graphique, mock-up, bannière, kakemono, post-it.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-danger text-white border-0 shadow h-100 calendar-check-fill">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Stratégie de communication</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        </div>
+                                        <p class="card-text font-weight-light">Analyse de la demande et du terrain.
+                                            Élaboration du plan d’action. Choix des outils, des personnes, des
+                                            prestataires. Suivi des actions. Indicateur des performances en bout de
+                                            course.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-danger text-white border-0 shadow h-100 calendar-date-fill">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Gestion de projet</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        </div>
+                                        <p class="card-text font-weight-light">Création d’un cahier de charge, rétro
+                                            planning, pilotage et gestion de budget.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-danger text-white border-0 shadow h-100 globe">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Web</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        </div>
+                                        <p class="card-text font-weight-light">Codage front-end, refonte visuelle site
+                                            web, intégration et utilisation d’outils de statistique. Rédaction de
+                                            contenus.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-danger text-white border-0 shadow h-100 at">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Réseaux sociaux</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        </div>
+                                        <p class="card-text font-weight-light">Connaissances poussées des réseaux
+                                            sociaux (Facebook, YouTube, Twitter). Création de visuels et rédaction de
+                                            contenu spécifique à chaque plateforme.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-danger text-white border-0 shadow h-100 camera-reels-fill">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Vidéo et photographie</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        </div>
+                                        <p class="card-text font-weight-light">Captation vidéo et audio d’événements
+                                            avec caméra d’épaule ou statique. Situation de tournage en studio ou sur
+                                            terrain. Planification et choix du matériel. Story-board. Montage et export.
+                                            Capture photo de lieu, de portrait et de groupe.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-5 ml-auto mr-auto p-0 my-5">
+                                <div class="card bg-danger text-white border-0 shadow h-100 people-fill">
+                                    <div class="card-body p-5">
+                                        <h2 class="card-title my-4">Social</h2>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                        </div>
+                                        <p class="card-text font-weight-light">Capacité à gérer une équipe et attentif à
+                                            la bonne cohésion de groupe avec l’aide d’outils de communication interne.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-white container text-right py-5 small-text">
+        <p class="m-0">©
+            <script>
+                var d = new Date();
+                var n = d.getFullYear();
+                document.write(n);
+            </script> Codé avec ❤️ par Alex Quiniou avec <a class="text-danger" href="https://code.visualstudio.com/"
+                target="_blank" rel="noopener noreferrer">Visual Studio Code</a>, <a class="text-danger"
+                href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a> et <a
+                class="text-danger" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </p classm-0>
+        <!-- <p>Avec l'aide de :</p>
+        <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"><img class="mx-3"
+                src="media/LOGO/bootstrap-punchout.svg" alt=""></a>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer"><img class="mx-3"
+                src="media/LOGO/Visual_Studio_Code_1.35_icon.svg" alt=""></a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><img class="mx-3"
+                src="media/LOGO/GitHub-Mark.svg" alt=""></a> -->
+    </footer>
+
+    <script>
+        // var bonjour = document.getElementsByClassName("tab-pane fade show active")[0].id;
+
+        // if (bonjour == "pills-home") {
+        //     document.getElementById("titre").textContent = "Expériences";
+        // } else if (bonjour == "pills-profile") {
+        //     document.getElementById("titre").textContent = "Formations";
+        // } else if (bonjour == "pills-contact") {
+        //     document.getElementById("titre").textContent = "Compétences";
+        // }
+
+        function test(titre) {
+            // var bonjour = 0;
+            // var bonjour = document.getElementsByClassName("tab-pane fade show active")[0].id;
+            // document.write(titre);
+
+            if (titre == "pills-home") {
+                document.getElementById("titre").textContent = "Expériences";
+            } else if (titre == "pills-profile") {
+                document.getElementById("titre").textContent = "Formations";
+            } else if (titre == "pills-contact") {
+                document.getElementById("titre").textContent = "Compétences";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
