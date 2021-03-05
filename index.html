@@ -190,31 +190,38 @@
         }
 
         .brush-fill {
-            background-image: url(media/bootstrap-icons-1.0.0/brush-fill.svg);
+            /* background-image: url(media/bootstrap-icons-1.0.0/brush-fill.svg); */
+            background-image: url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><foreignObject width=%22100px%22 height=%22100px%22><div xmlns=%22http://www.w3.org/1999/xhtml%22 style=%22 font-size:70px%22>🖌️</div></foreignObject></svg>");
         }
 
         .calendar-check-fill {
-            background-image: url(media/bootstrap-icons-1.0.0/calendar-check-fill.svg);
+            /* background-image: url(media/bootstrap-icons-1.0.0/calendar-check-fill.svg); */
+            background-image: url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><foreignObject width=%22100px%22 height=%22100px%22><div xmlns=%22http://www.w3.org/1999/xhtml%22 style=%22 font-size:70px%22>🎯</div></foreignObject></svg>");
         }
 
         .calendar-date-fill {
-            background-image: url(media/bootstrap-icons-1.0.0/calendar-date-fill.svg);
+            /* background-image: url(media/bootstrap-icons-1.0.0/calendar-date-fill.svg); */
+            background-image: url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><foreignObject width=%22100px%22 height=%22100px%22><div xmlns=%22http://www.w3.org/1999/xhtml%22 style=%22 font-size:70px%22>📅</div></foreignObject></svg>");
         }
 
         .globe {
-            background-image: url(media/bootstrap-icons-1.0.0/globe.svg);
+            /* background-image: url(media/bootstrap-icons-1.0.0/globe.svg); */
+            background-image: url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><foreignObject width=%22100px%22 height=%22100px%22><div xmlns=%22http://www.w3.org/1999/xhtml%22 style=%22 font-size:70px%22>🌐</div></foreignObject></svg>");
         }
 
         .at {
-            background-image: url(media/bootstrap-icons-1.0.0/at.svg);
+            /* background-image: url(media/bootstrap-icons-1.0.0/at.svg); */
+            background-image: url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><foreignObject width=%22100px%22 height=%22100px%22><div xmlns=%22http://www.w3.org/1999/xhtml%22 style=%22 font-size:70px%22>👍</div></foreignObject></svg>");
         }
 
         .camera-reels-fill {
-            background-image: url(media/bootstrap-icons-1.0.0/camera-reels-fill.svg);
+            /* background-image: url(media/bootstrap-icons-1.0.0/camera-reels-fill.svg); */
+            background-image: url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><foreignObject width=%22100px%22 height=%22100px%22><div xmlns=%22http://www.w3.org/1999/xhtml%22 style=%22 font-size:70px%22>🎥</div></foreignObject></svg>");
         }
 
         .people-fill {
-            background-image: url(media/bootstrap-icons-1.0.0/people-fill.svg);
+            /* background-image: url(media/bootstrap-icons-1.0.0/people-fill.svg); */
+            background-image: url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><foreignObject width=%22100px%22 height=%22100px%22><div xmlns=%22http://www.w3.org/1999/xhtml%22 style=%22 font-size:70px%22>👥</div></foreignObject></svg>");
         }
 
         .card-body {
@@ -239,6 +246,11 @@
         .nav-pills .nav-link.active,
         .nav-pills .show>.nav-link {
             background-color: #dc3545 !important;
+        }
+
+        .emoji {
+            font-size: 1.5rem;
+            margin: 0;
         }
     </style>
 </head>
@@ -309,7 +321,8 @@
                                 <a class="nav-link active btn btn-lg rounded-circle mx-1 shadow d-flex align-items-center justify-content-center"
                                     id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
                                     aria-controls="pills-home" aria-selected="true" onclick="test('pills-home')">
-                                    <i class="material-icons">work</i>
+                                    <p class="emoji">💼</p>
+                                    <!-- <i class="material-icons">work</i> -->
                                     <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-briefcase-fill"
                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -323,7 +336,8 @@
                                 <a class="nav-link btn btn-lg rounded-circle mx-1 shadow d-flex align-items-center justify-content-center"
                                     id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
                                     aria-controls="pills-profile" aria-selected="false" onclick="test('pills-profile')">
-                                    <i class="material-icons">book</i>
+                                    <p class="emoji">🎓</p>
+                                    <!-- <i class="material-icons">book</i> -->
                                     <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-book-fill"
                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -335,7 +349,8 @@
                                 <a class="nav-link btn btn-lg rounded-circle mx-1 shadow d-flex align-items-center justify-content-center"
                                     id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
                                     aria-controls="pills-contact" aria-selected="false" onclick="test('pills-contact')">
-                                    <i class="material-icons">how_to_reg</i>
+                                    <p class="emoji">💡</p>
+                                    <!-- <i class="material-icons">how_to_reg</i> -->
                                     <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-check-fill"
                                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
