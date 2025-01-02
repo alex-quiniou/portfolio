@@ -290,6 +290,11 @@
             height: 3rem;
             width: 3rem;
         }
+
+        div.modal-body a img,
+        div.modal-body a svg {
+            max-height: 1.5rem;
+        }
     </style>
 </head>
 
@@ -955,7 +960,7 @@
         </div>
     </div>
     <footer class="text-white container text-right py-5 small-text">
-        <p class="m-0">©
+        <p class="text-center">©
             <script>
                 var d = new Date();
                 var n = d.getFullYear();
@@ -968,7 +973,88 @@
                 target="_blank" rel="noopener noreferrer">Anime.js</a> et <a class="text-danger"
                 href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>.
         </p>
+        <!-- Button trigger modal -->
+        <p id="ListesEnvies" class="m-0 text-center"><a class="" href="http://" target="_blank"
+                rel="noopener noreferrer" data-toggle="modal" data-target="#exampleModal">🎁</a></p>
+
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Listes d'envies</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>T'as pas d'idées de cadeau ? Ça tombe bien. J'ai plusieurs listes d'achats. 😉</p>
+                    <a type="button" class="btn btn-light my-1"
+                        href="https://www.amazon.fr/hz/wishlist/ls/2AO20AE8GB69J?ref_=wl_share" target="_blank"
+                        rel="noopener noreferrer"><img
+                            src="https://amazon-blogs-brightspot-lower.s3.amazonaws.com/about/00/92/0260aab44ee8a2faeafde18ee1da/amazon-logo-inverse.svg"
+                            alt=""></a>
+                    <a type="button" class="btn btn-light my-1"
+                        href="https://secure.fnac.com/wishlist/a8ec9122-8a38-4fff-bdae-31d306af3838" target="_blank"
+                        rel="noopener noreferrer"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg" alt=""> FILM</a>
+                    <a type="button" class="btn btn-light my-1"
+                        href="https://secure.fnac.com/wishlist/4c946d42-2e90-4165-b23f-ba496ef83352" target="_blank"
+                        rel="noopener noreferrer"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg" alt=""> LIVRE</a>
+                    <a type="button" class="btn btn-light my-1"
+                        href="https://secure.fnac.com/wishlist/22a3bd00-6eb1-4bc1-a1d0-07f22c03bc32" target="_blank"
+                        rel="noopener noreferrer"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg" alt=""> MUSIQUE</a>
+                    <a type="button" class="btn btn-light my-1"
+                        href="https://secure.fnac.com/wishlist/ce01865c-cd90-4f4d-a411-729c774c4b12" target="_blank"
+                        rel="noopener noreferrer"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg" alt=""> SERIE</a>
+                    <a type="button" class="btn btn-light my-1" href="https://www.greenweez.com/fabrique-a-cadeaux"
+                        target="_blank" rel="noopener noreferrer"><img
+                            src="https://play-lh.googleusercontent.com/Yof5iP2Mr8u3E2Jkm9FwcCWqnrX8R42qzN-Gu9U5AdQMCoBsiktAod3enwwoN9MmQG02=w240-h480"
+                            alt=""></a>
+                    <a type="button" class="btn btn-light my-1"
+                        href="https://www.piccantino.fr/liste-de-souhaits/E7GZHBFKN5X56" target="_blank"
+                        rel="noopener noreferrer"><img
+                            src="https://pi.nice-cdn.com/disco/build/core-view/Logo/piccantino-logo-fr_5eae9e5h0p.svg"
+                            alt=""></a>
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item"><a
+                                href="https://www.expertpilot.com/stages_pilotage-stages_alpine_a110.html?select_circuit=2"
+                                target="_blank" rel="noopener noreferrer">Stages Alpine A110 Geoparc -
+                                Saint-Die-des-Vosges</a>
+                        </li>
+                        <li class="list-group-item"><a
+                                href="https://www.200chrono.fr/merchant/product/coffret-pilotage-ferrari"
+                                target="_blank" rel="noopener noreferrer">
+                                Coffret Découverte | Stage pilotage en Alsace </a>
+                        </li>
+                        <li class="list-group-item"><a
+                                href="https://www.cookandbecker.com/en/artwork/1956/port-the-witcher-3-cd-projekt-red.html"
+                                target="_blank" rel="noopener noreferrer">The Witcher 3 (videogame/brand) | Port</a>
+                        </li>
+                        <li class="list-group-item"><a
+                                href="https://www.casio.com/fr/watches/gshock/product.GBX-100NS-1/" target="_blank"
+                                rel="noopener noreferrer">Casio G-Shock | GBX-100NS-1</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="https://www.garmin.com/fr-FR/p/1033231/pn/010-02859-10" target="_blank"
+                                rel="noopener noreferrer">Garmin Dash Cam™ X210</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         function test(titre) {
