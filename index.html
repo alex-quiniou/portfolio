@@ -971,7 +971,8 @@
                 class="text-danger" href="https://getbootstrap.com/" target="_blank"
                 rel="noopener noreferrer">Bootstrap</a>, <a class="text-danger" href="https://animejs.com/"
                 target="_blank" rel="noopener noreferrer">Anime.js</a> et <a class="text-danger"
-                href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>. <button type="button"
+                class="btn btn-link text-danger p-0 small-text" onclick="showAllElements()">Révéler le contenu complet</button>.
         </p>
         <!-- Button trigger modal -->
         <p id="ListesEnvies" class="m-0 text-center"><a class="" href="http://" target="_blank"
@@ -1099,6 +1100,7 @@
     </script> -->
 
     <script>
+        // https://codepen.io/brianacamp/pen/YRyrEV
         var projets = document.querySelector('.projets');
 
         anime({
@@ -1110,7 +1112,17 @@
         });
     </script>
 
-    <!-- https://codepen.io/brianacamp/pen/YRyrEV -->
+    <script>
+        // Fonction pour supprimer la classe 'd-none' de tous les éléments qui la possèdent
+        function showAllElements() {
+            var elements = document.querySelectorAll('.d-none');
+            elements.forEach(function (element) {
+                element.classList.remove('d-none');
+            });
+        }
+    </script>
+
+
 
 </body>
 
